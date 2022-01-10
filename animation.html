@@ -6,6 +6,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Animantion</title>
     <style>
+        @keyframes sliding {
+            from{
+                background-color: rgb(180, 56, 238);
+                left: 0;
+            }
+            to{
+                background-color: rgb(163, 162, 212);
+                left: 200px;
+                top: 100px;
+            }
+        }
         .stage{
             width: 500px;
             height: 300px;
@@ -14,8 +25,11 @@ background-color: rgb(27, 197, 92);
         .ball{
             width: 100px;
             height: 100px;
-            background-color: rgb(230, 80, 34);
+            background-color: rgb(230, 57, 34);
             border-radius: 50%;
+            animation: sliding 5s ease-in-out 1s 50  alternate;
+            animation-play-state: running;
+            position: relative;
         }
     </style>
 </head>
